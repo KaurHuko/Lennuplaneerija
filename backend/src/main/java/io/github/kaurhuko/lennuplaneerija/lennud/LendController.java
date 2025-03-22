@@ -14,7 +14,7 @@ public class LendController {
         this.repository = repository;
     }
 
-    @GetMapping("/employees")
+    @GetMapping("/lennud")
     List<Lend> all() {
         return repository.findAll();
     }
