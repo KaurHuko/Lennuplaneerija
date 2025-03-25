@@ -19,16 +19,19 @@ public class Lend {
     private String saabumisKoht;
     private LocalDateTime valjumisAeg;
     private LocalDateTime saabumisAeg;
+    private Double hindEur;
+
 
     protected Lend() {}
 
-    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, LocalDateTime valjumisAeg, LocalDateTime saabumisAeg) {
+    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, LocalDateTime valjumisAeg, LocalDateTime saabumisAeg, Double hindEur) {
         this.lennuNumber = lennuNumber;
         this.lennuFirma = lennuFirma;
         this.valjumisKoht = valjumisKoht;
         this.saabumisKoht = saabumisKoht;
         this.valjumisAeg = valjumisAeg;
         this.saabumisAeg = saabumisAeg;
+        this.hindEur = hindEur;
     }
 
     public void setId(Long id) {
@@ -87,4 +90,11 @@ public class Lend {
         this.saabumisAeg = saabumisAeg;
     }
 
+    public Double getHindEur() {
+        return hindEur;
+    }
+
+    public void setHindEur(Double hind) {
+        this.hindEur = hind;
+    }
 }
