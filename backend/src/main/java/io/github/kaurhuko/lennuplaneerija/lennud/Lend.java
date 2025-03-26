@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 @Entity
 public class Lend {
@@ -17,14 +18,14 @@ public class Lend {
     private String lennuFirma;
     private String valjumisKoht;
     private String saabumisKoht;
-    private LocalDateTime valjumisAeg;
-    private LocalDateTime saabumisAeg;
+    private ZonedDateTime valjumisAeg;
+    private ZonedDateTime saabumisAeg;
     private Double hindEur;
 
 
     protected Lend() {}
 
-    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, LocalDateTime valjumisAeg, LocalDateTime saabumisAeg, Double hindEur) {
+    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, ZonedDateTime valjumisAeg, ZonedDateTime saabumisAeg, Double hindEur) {
         this.lennuNumber = lennuNumber;
         this.lennuFirma = lennuFirma;
         this.valjumisKoht = valjumisKoht;
@@ -74,19 +75,19 @@ public class Lend {
         this.saabumisKoht = saabumisKoht;
     }
 
-    public LocalDateTime getValjumisAeg() {
+    public ZonedDateTime getValjumisAeg() {
         return valjumisAeg;
     }
 
-    public void setValjumisAeg(LocalDateTime valjumisAeg) {
+    public void setValjumisAeg(ZonedDateTime valjumisAeg) {
         this.valjumisAeg = valjumisAeg;
     }
 
-    public LocalDateTime getSaabumisAeg() {
+    public ZonedDateTime getSaabumisAeg() {
         return saabumisAeg;
     }
 
-    public void setSaabumisAeg(LocalDateTime saabumisAeg) {
+    public void setSaabumisAeg(ZonedDateTime saabumisAeg) {
         this.saabumisAeg = saabumisAeg;
     }
 

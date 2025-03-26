@@ -9,7 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 @SpringBootApplication
 public class LennuPlaneerijaApplication {
@@ -26,13 +27,15 @@ public class LennuPlaneerijaApplication {
 
 			log.info("Preloading: " + repository.save(
 					new Lend("AA123", "airBaltic", "TLL", "RIX",
-							LocalDateTime.of(2025, 4, 1, 12, 30),
-							LocalDateTime.of(2025, 4, 1, 14, 0), 100.0)));
+							ZonedDateTime.of(2025, 4, 1, 12, 30, 0, 0, ZoneId.of("Universal")),
+							ZonedDateTime.of(2025, 4, 1, 14, 0, 0, 0, ZoneId.of("Universal")),
+							100.0)));
 
 			log.info("Preloading: " + repository.save(
 					new Lend("BB234", "airBaltic", "RIX", "FRA",
-							LocalDateTime.of(2025, 4, 1, 18, 0),
-							LocalDateTime.of(2025, 4, 1, 21, 0), 200.0)));
+							ZonedDateTime.of(2025, 4, 1, 18, 0, 0, 0, ZoneId.of("Universal")),
+							ZonedDateTime.of(2025, 4, 1, 21, 0, 0, 0, ZoneId.of("Universal")),
+							200.0)));
 
 		};
 	}
