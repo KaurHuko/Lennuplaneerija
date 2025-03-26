@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.time.ZonedDateTime;
+import java.time.OffsetDateTime;
 
 @Entity
 public class Lend {
@@ -17,14 +17,14 @@ public class Lend {
     private String lennuFirma;
     private String valjumisKoht;
     private String saabumisKoht;
-    private ZonedDateTime valjumisAeg;
-    private ZonedDateTime saabumisAeg;
+    private OffsetDateTime valjumisAeg;
+    private OffsetDateTime saabumisAeg;
     private Double hindEur;
 
 
     protected Lend() {}
 
-    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, ZonedDateTime valjumisAeg, ZonedDateTime saabumisAeg, Double hindEur) {
+    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, OffsetDateTime valjumisAeg, OffsetDateTime saabumisAeg, Double hindEur) {
         this.lennuNumber = lennuNumber;
         this.lennuFirma = lennuFirma;
         this.valjumisKoht = valjumisKoht;
@@ -74,19 +74,19 @@ public class Lend {
         this.saabumisKoht = saabumisKoht;
     }
 
-    public ZonedDateTime getValjumisAeg() {
+    public OffsetDateTime getValjumisAeg() {
         return valjumisAeg;
     }
 
-    public void setValjumisAeg(ZonedDateTime valjumisAeg) {
+    public void setValjumisAeg(OffsetDateTime valjumisAeg) {
         this.valjumisAeg = valjumisAeg;
     }
 
-    public ZonedDateTime getSaabumisAeg() {
+    public OffsetDateTime getSaabumisAeg() {
         return saabumisAeg;
     }
 
-    public void setSaabumisAeg(ZonedDateTime saabumisAeg) {
+    public void setSaabumisAeg(OffsetDateTime saabumisAeg) {
         this.saabumisAeg = saabumisAeg;
     }
 
