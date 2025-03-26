@@ -16,9 +16,11 @@ public class LendController {
     }
 
     @GetMapping("/lennud")
-    List<Lend> all(@RequestParam(required = false) Double minHindEur,
+    List<Lend> all(@RequestParam(required = false) String valjumisKoht,
+                   @RequestParam(required = false) String saabumisKoht,
+                   @RequestParam(required = false) Double minHindEur,
                    @RequestParam(required = false) Double maxHindEur) {
-        return repository.findWithFilters(minHindEur, maxHindEur);
+        return repository.findWithFilters(valjumisKoht, saabumisKoht, minHindEur, maxHindEur);
     }
 
 }
