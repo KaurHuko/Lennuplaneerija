@@ -21,9 +21,15 @@ public class LendController {
                    @RequestParam(required = false) String saabumisKoht,
                    @RequestParam(required = false) OffsetDateTime minValjumisAeg,
                    @RequestParam(required = false) OffsetDateTime maxValjumisAeg,
+                   @RequestParam(required = false) Integer minLennuaegMinutid,
+                   @RequestParam(required = false) Integer maxLennuaegMinutid,
                    @RequestParam(required = false) Double minHindEur,
                    @RequestParam(required = false) Double maxHindEur) {
-        return repository.findWithFilters(valjumisKoht, saabumisKoht, minValjumisAeg, maxValjumisAeg, minHindEur, maxHindEur);
+
+        return repository.findWithFilters(valjumisKoht, saabumisKoht,
+                minValjumisAeg, maxValjumisAeg,
+                minLennuaegMinutid, maxLennuaegMinutid,
+                minHindEur, maxHindEur);
     }
 
 }
