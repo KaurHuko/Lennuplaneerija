@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface LendRepository extends JpaRepository<Lend, Long> {
@@ -20,8 +20,8 @@ public interface LendRepository extends JpaRepository<Lend, Long> {
             "(:maxHindEur is null or l.hindEur <= :maxHindEur) ")
     List<Lend> findWithFilters(@Param("valjumisKoht") String valjumisKoht,
                                @Param("saabumisKoht") String saabumisKoht,
-                               @Param("minValjumisAeg") OffsetDateTime minValjumisAeg,
-                               @Param("maxValjumisAeg") OffsetDateTime maxValjumisAeg,
+                               @Param("minValjumisAeg") LocalDateTime minValjumisAeg,
+                               @Param("maxValjumisAeg") LocalDateTime maxValjumisAeg,
                                @Param("minLennuaegMinutid") Integer minLennuaegMinutid,
                                @Param("maxLennuaegMinutid") Integer maxLennuaegMinutid,
                                @Param("minHindEur") Double minHindEur,

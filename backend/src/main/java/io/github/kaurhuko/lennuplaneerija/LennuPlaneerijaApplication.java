@@ -9,8 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
+import java.time.LocalDateTime;
 
 @SpringBootApplication
 public class LennuPlaneerijaApplication {
@@ -27,14 +26,14 @@ public class LennuPlaneerijaApplication {
 
 			log.info("Preloading: " + repository.save(
 					new Lend("AA123", "airBaltic", "TLL", "RIX",
-							OffsetDateTime.of(2025, 4, 1, 12, 30, 0, 0, ZoneOffset.UTC),
-							OffsetDateTime.of(2025, 4, 1, 14, 0, 0, 0, ZoneOffset.UTC),
+							LocalDateTime.of(2025, 4, 1, 12, 30),
+							LocalDateTime.of(2025, 4, 1, 14, 0),
 							90, 100.0)));
 
 			log.info("Preloading: " + repository.save(
 					new Lend("BB234", "airBaltic", "RIX", "FRA",
-							OffsetDateTime.of(2025, 4, 1, 18, 0, 0, 0, ZoneOffset.UTC),
-							OffsetDateTime.of(2025, 4, 1, 21, 0, 0, 0, ZoneOffset.UTC),
+							LocalDateTime.of(2025, 4, 1, 18, 0),
+							LocalDateTime.of(2025, 4, 1, 20, 0),
 							180, 200.0)));
 
 		};

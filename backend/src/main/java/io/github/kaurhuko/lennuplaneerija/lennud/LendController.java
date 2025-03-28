@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -19,8 +19,8 @@ public class LendController {
     @GetMapping("/lennud")
     List<Lend> all(@RequestParam(required = false) String valjumisKoht,
                    @RequestParam(required = false) String saabumisKoht,
-                   @RequestParam(required = false) OffsetDateTime minValjumisAeg,
-                   @RequestParam(required = false) OffsetDateTime maxValjumisAeg,
+                   @RequestParam(required = false) LocalDateTime minValjumisAeg,
+                   @RequestParam(required = false) LocalDateTime maxValjumisAeg,
                    @RequestParam(required = false) Integer minLennuaegMinutid,
                    @RequestParam(required = false) Integer maxLennuaegMinutid,
                    @RequestParam(required = false) Double minHindEur,
