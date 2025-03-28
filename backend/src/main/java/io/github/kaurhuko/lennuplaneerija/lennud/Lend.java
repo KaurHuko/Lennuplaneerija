@@ -19,18 +19,20 @@ public class Lend {
     private String saabumisKoht;
     private OffsetDateTime valjumisAeg;
     private OffsetDateTime saabumisAeg;
+    private Integer lennuaegMinutid;
     private Double hindEur;
 
 
     protected Lend() {}
 
-    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, OffsetDateTime valjumisAeg, OffsetDateTime saabumisAeg, Double hindEur) {
+    public Lend(String lennuNumber, String lennuFirma, String valjumisKoht, String saabumisKoht, OffsetDateTime valjumisAeg, OffsetDateTime saabumisAeg, Integer lennuaegMinutid, Double hindEur) {
         this.lennuNumber = lennuNumber;
         this.lennuFirma = lennuFirma;
         this.valjumisKoht = valjumisKoht;
         this.saabumisKoht = saabumisKoht;
         this.valjumisAeg = valjumisAeg;
         this.saabumisAeg = saabumisAeg;
+        this.lennuaegMinutid = lennuaegMinutid;
         this.hindEur = hindEur;
     }
 
@@ -88,6 +90,14 @@ public class Lend {
 
     public void setSaabumisAeg(OffsetDateTime saabumisAeg) {
         this.saabumisAeg = saabumisAeg;
+    }
+
+    public Integer getLennuaegMinutid() {
+        return lennuaegMinutid;
+    }
+
+    public void setLennuaegMinutid(Integer lennuaeg) {
+        this.lennuaegMinutid = lennuaeg;
     }
 
     public Double getHindEur() {

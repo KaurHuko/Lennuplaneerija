@@ -14,8 +14,8 @@ public interface LendRepository extends JpaRepository<Lend, Long> {
             "(:saabumisKoht is null or l.saabumisKoht = :saabumisKoht) and " +
             "(:minValjumisAeg is null or l.valjumisAeg >= :minValjumisAeg) and " +
             "(:maxValjumisAeg is null or l.valjumisAeg <= :maxValjumisAeg) and " +
-            "(:minLennuaegMinutid is null or timestampdiff(minute, l.valjumisAeg, l.saabumisAeg) >= :minLennuaegMinutid) and " +
-            "(:maxLennuaegMinutid is null or timestampdiff(minute, l.valjumisAeg, l.saabumisAeg) <= :maxLennuaegMinutid) and " +
+            "(:minLennuaegMinutid is null or l.lennuaegMinutid >= :minLennuaegMinutid) and " +
+            "(:maxLennuaegMinutid is null or l.lennuaegMinutid <= :maxLennuaegMinutid) and " +
             "(:minHindEur is null or l.hindEur >= :minHindEur) and " +
             "(:maxHindEur is null or l.hindEur <= :maxHindEur) ")
     List<Lend> findWithFilters(@Param("valjumisKoht") String valjumisKoht,

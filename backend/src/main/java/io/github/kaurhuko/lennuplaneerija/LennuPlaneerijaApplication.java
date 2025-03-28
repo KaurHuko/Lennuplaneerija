@@ -29,13 +29,13 @@ public class LennuPlaneerijaApplication {
 					new Lend("AA123", "airBaltic", "TLL", "RIX",
 							OffsetDateTime.of(2025, 4, 1, 12, 30, 0, 0, ZoneOffset.UTC),
 							OffsetDateTime.of(2025, 4, 1, 14, 0, 0, 0, ZoneOffset.UTC),
-							100.0)));
+							90, 100.0)));
 
 			log.info("Preloading: " + repository.save(
 					new Lend("BB234", "airBaltic", "RIX", "FRA",
 							OffsetDateTime.of(2025, 4, 1, 18, 0, 0, 0, ZoneOffset.UTC),
 							OffsetDateTime.of(2025, 4, 1, 21, 0, 0, 0, ZoneOffset.UTC),
-							200.0)));
+							180, 200.0)));
 
 		};
 	}
