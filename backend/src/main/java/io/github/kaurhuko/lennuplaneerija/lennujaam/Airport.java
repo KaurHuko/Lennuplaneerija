@@ -2,10 +2,12 @@ package io.github.kaurhuko.lennuplaneerija.lennujaam;
 
 public class Airport {
 
+    private final String iata;
     private final String country;
     private final String municipality;
 
-    private Airport(String country, String municipality) {
+    private Airport(String iata, String country, String municipality) {
+        this.iata = iata;
         this.country = country;
         this.municipality = municipality;
     }
@@ -16,5 +18,9 @@ public class Airport {
 
     public String getCountry() {
         return country;
+    }
+
+    public String getIata() {
+        return iata;
     }
 }
